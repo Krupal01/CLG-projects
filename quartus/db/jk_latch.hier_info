@@ -1,0 +1,12 @@
+|jk_latch
+j => q~0.DATAB
+j => always0~1.IN0
+j => always0~0.IN0
+k => qbar~0.DATAB
+k => always0~1.IN1
+k => always0~0.IN1
+enable => q~2.IN1
+q <= q$latch.DB_MAX_OUTPUT_PORT_TYPE
+qbar <= qbar$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+

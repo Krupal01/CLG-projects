@@ -1,0 +1,14 @@
+|fullsubtractor_str
+a => xor1.IN0
+a => and2.IN1
+a => and1.IN0
+b => and3.IN1
+b => and1.IN1
+b => xor1.IN1
+cin => and3.IN0
+cin => and2.IN0
+cin => xor2.IN0
+sub <= xor2.DB_MAX_OUTPUT_PORT_TYPE
+borrow <= or2.DB_MAX_OUTPUT_PORT_TYPE
+
+

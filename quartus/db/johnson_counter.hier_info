@@ -1,0 +1,15 @@
+|johnson_counter
+clk => y[3]~reg0.CLK
+clk => y[2]~reg0.CLK
+clk => y[1]~reg0.CLK
+clk => y[0]~reg0.CLK
+rst => y~3.OUTPUTSELECT
+rst => y~2.OUTPUTSELECT
+rst => y~0.OUTPUTSELECT
+rst => y~1.OUTPUTSELECT
+y[0] <= y[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= y[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,16 @@
+|mux41
+i0 => w0~0.IN1
+i1 => w1~0.IN1
+i2 => w2~0.IN1
+i3 => w3~0.IN1
+s1 => w3~0.IN0
+s1 => w2~0.IN0
+s1 => w0~0.IN0
+s1 => w1~0.IN0
+s2 => w3.IN0
+s2 => w1.IN0
+s2 => w0.IN1
+s2 => w2.IN0
+y0 <= y0~2.DB_MAX_OUTPUT_PORT_TYPE
+
+

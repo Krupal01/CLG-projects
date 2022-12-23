@@ -1,0 +1,10 @@
+module gate(input a,b, output c0,c1,c2,c3,c4,c5);
+
+assign c0=a&b;
+assign c1=a|b;
+assign c2=~(a&b);
+assign c3=~(a|b);
+assign c4=(~a&b)|(a&~b);
+assign c5=(~a&~b)|(a&b);
+
+endmodule 

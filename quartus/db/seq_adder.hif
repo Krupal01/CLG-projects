@@ -1,0 +1,117 @@
+Version 8.1 Build 163 10/28/2008 SJ Web Edition
+7
+2996
+OFF
+OFF
+OFF
+OFF
+ON
+ON
+ON
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Partition --
+-- End Partition --
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+seq_adder
+# storage
+db|seq_adder.(0).cnf
+db|seq_adder.(0).cnf
+# case_insensitive
+# source_file
+seq_adder.bdf
+6abe4620af66e59b4a767410dd2da99a
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# entity
+shiftreg
+# storage
+db|seq_adder.(1).cnf
+db|seq_adder.(1).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+shiftreg.vhd
+2c728dbaf68aff7f9dac598daa0e083
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+shiftreg:inst2
+shiftreg:inst
+shiftreg:inst1
+shiftreg:inst3
+}
+# lmf
+c:|altera|81|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+fulladder_str
+# storage
+db|seq_adder.(2).cnf
+db|seq_adder.(2).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+fulladder_str.v
+4f2ede3e99fb645bead3a6eea732052
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+fulladder_str:inst4
+}
+# macro_sequence
+
+# end
+# complete
+

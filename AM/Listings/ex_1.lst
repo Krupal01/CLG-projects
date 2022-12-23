@@ -1,0 +1,98 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             RESET, DATA, READONLY
+    2 00000000                 EXPORT           __Vectors
+    3 00000000         
+    4 00000000         __Vectors
+    5 00000000 20001000        DCD              0x20001000  ; stack pointer val
+                                                            ue when stack is em
+                                                            pty
+    6 00000004 00000000        DCD              Reset_Handler ; reset vector
+    7 00000008         
+    8 00000008                 ALIGN
+    9 00000008         
+   10 00000008         ; The program
+   11 00000008         ; Linker requires Reset_Handler
+   12 00000008         
+   13 00000008                 AREA             MYCODE, CODE, READONLY
+   14 00000000         
+   15 00000000                 ENTRY
+   16 00000000                 EXPORT           Reset_Handler
+   17 00000000         
+   18 00000000         Reset_Handler
+   19 00000000         
+   20 00000000 E3E01102        LDR              R1,=0x7FFFFFFF
+   21 00000004 E3A02055        MOV              R2,#0x55
+   22 00000008 E3A03002        MOV              R3,#0x02
+   23 0000000C E1A04103        MOV              R4,R3,LSL #2
+   24 00000010 E0825003        ADD              R5,R2,R3
+   25 00000014 E0826203        ADD              R6,R2,R3,LSL #4
+   26 00000018 EAFFFFFE 
+                       LOOP    B                LOOP
+   27 0000001C         
+   28 0000001C         
+                       
+Command Line: --debug --xref --diag_suppress=9931 --apcs=interwork --depend=.\o
+bjects\ex_1.d -o.\objects\ex_1.o -IC:\Keil_v5\ARM\RV31\INC -IC:\Keil_v5\ARM\CMS
+IS\Include -IC:\Keil_v5\ARM\Inc\Philips --predefine="__EVAL SETA 1" --predefine
+="__UVISION_VERSION SETA 522" --list=.\listings\ex_1.lst ex_1.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+RESET 00000000
+
+Symbol: RESET
+   Definitions
+      At line 1 in file ex_1.s
+   Uses
+      None
+Comment: RESET unused
+__Vectors 00000000
+
+Symbol: __Vectors
+   Definitions
+      At line 4 in file ex_1.s
+   Uses
+      At line 2 in file ex_1.s
+Comment: __Vectors used once
+2 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+LOOP 00000018
+
+Symbol: LOOP
+   Definitions
+      At line 26 in file ex_1.s
+   Uses
+      At line 26 in file ex_1.s
+Comment: LOOP used once
+MYCODE 00000000
+
+Symbol: MYCODE
+   Definitions
+      At line 13 in file ex_1.s
+   Uses
+      None
+Comment: MYCODE unused
+Reset_Handler 00000000
+
+Symbol: Reset_Handler
+   Definitions
+      At line 18 in file ex_1.s
+   Uses
+      At line 6 in file ex_1.s
+      At line 16 in file ex_1.s
+
+3 symbols
+337 symbols in table

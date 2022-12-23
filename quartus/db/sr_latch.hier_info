@@ -1,0 +1,12 @@
+|sr_latch
+s => q$latch.DATAIN
+s => always0~1.IN0
+s => always0~0.IN0
+r => qb$latch.DATAIN
+r => always0~1.IN1
+r => always0~0.IN1
+enable => qb~1.IN1
+q <= q~0.DB_MAX_OUTPUT_PORT_TYPE
+qb <= qb~2.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,12 @@
+|bit3upcounter
+clk => y[2]~reg0.CLK
+clk => y[1]~reg0.CLK
+clk => y[0]~reg0.CLK
+c => y~0.OUTPUTSELECT
+c => y~1.OUTPUTSELECT
+c => y~2.OUTPUTSELECT
+y[0] <= y[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

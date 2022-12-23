@@ -1,0 +1,15 @@
+Analysis & Synthesis Status : Successful - Sat Oct 03 23:01:06 2020
+Quartus II Version : 8.1 Build 163 10/28/2008 SJ Web Edition
+Revision Name : bit3upcounter
+Top-level Entity Name : bit3upcounter
+Family : Stratix II
+Logic utilization : N/A
+    Combinational ALUTs : 3
+    Dedicated logic registers : 3
+Total registers : 3
+Total pins : 5
+Total virtual pins : 0
+Total block memory bits : 0
+DSP block 9-bit elements : 0
+Total PLLs : 0
+Total DLLs : 0

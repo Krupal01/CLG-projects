@@ -1,0 +1,31 @@
+module sr_latch ( s ,r ,enable ,q ,qb );
+
+output reg q ;
+output reg qb ;
+input s ;
+input r ;
+input enable ;
+
+always @ (enable or s or r ) 
+begin
+ if (enable) 
+ begin
+  if (s!=r)
+   begin
+   q = s;
+   qb = r;
+  end 
+  else if (s==1 && r==1)
+   begin
+   q = 1'bZ;
+   qb = 1'bZ;
+  end
+ end
+end
+
+endmodule
+
+
+
+
+

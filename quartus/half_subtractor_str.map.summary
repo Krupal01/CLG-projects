@@ -1,0 +1,15 @@
+Analysis & Synthesis Status : Successful - Thu Oct 01 07:58:52 2020
+Quartus II Version : 8.1 Build 163 10/28/2008 SJ Web Edition
+Revision Name : half_subtractor_str
+Top-level Entity Name : half_subtractor_str
+Family : Stratix II
+Logic utilization : N/A
+    Combinational ALUTs : 2
+    Dedicated logic registers : 0
+Total registers : 0
+Total pins : 4
+Total virtual pins : 0
+Total block memory bits : 0
+DSP block 9-bit elements : 0
+Total PLLs : 0
+Total DLLs : 0

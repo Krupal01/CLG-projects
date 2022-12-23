@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>find word</title>
+    <script>
+        function find(){
+            var sentance=document.getElementById("text").value;
+            var word = document.getElementById("text1").value;
+            sentance = sentance.toLowerCase();
+            sentance = sentance.split(" ");
+         
+            for(i=0;i<sentance.length;i++){
+                var j = sentance[i];
+                if(j==word){
+                    document.getElementById("result").innerHTML = "index of word in snetnce is "+i;
+                }
+            }
+
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="text">sentance
+    <input type="text" id="text1">word
+    <button onclick="find()">find</button>
+    <p id="result" size="50"></p>
+</body>
+</html>

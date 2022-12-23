@@ -1,0 +1,2 @@
+IF {Link2}1@X0 == ON
+BITON ({Link2}1@Y0)

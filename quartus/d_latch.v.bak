@@ -1,0 +1,10 @@
+module d_latch(Q,D,control);
+
+output Q;
+input D,control;
+reg Q;
+
+always @(control or D)
+if(control) Q = D; 
+
+endmodule

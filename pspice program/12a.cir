@@ -1,0 +1,18 @@
+*deplation nmos
+.model n1 NMOS(LEVEL=1 VTO=-3V KP=20.179E-6 GAMMA=1.179
+					+LAMBDA=0.005 PHI=0.66 uO=600 NSUB=5E15
+					+Tox=1000E-8)
+.model n2 NMOS(LEVEL=1 VTO=1V KP=20.179E-6 GAMMA=1.179
+					+LAMBDA=0.005 PHI=0.66 uO=600 NSUB=5E15
+					+Tox=1000E-8)
+
+M_N1 2 1 1 0 n1 w=8u l=2u
+M_N2 1 3 0 0 n2 w=2u l=2u
+vgs 3 0 PULSE(0 5 1ns 2ns 2ns 18ns 40ns)
+vdd 2 0 5v
+cload 1 0 100ff
+.tran 1ns 100ns
+.plot dc v(1)
+.probe
+.end
+

@@ -1,0 +1,14 @@
+|full_subtractor
+a => sub~0.IN0
+a => borrow~0.IN0
+a => borrow~1.IN0
+b => borrow~3.IN0
+b => borrow~0.IN1
+b => sub~0.IN1
+cin => borrow~3.IN1
+cin => borrow~1.IN1
+cin => sub~1.IN1
+sub <= sub~1.DB_MAX_OUTPUT_PORT_TYPE
+borrow <= borrow~4.DB_MAX_OUTPUT_PORT_TYPE
+
+

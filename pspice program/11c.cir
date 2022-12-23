@@ -1,0 +1,17 @@
+*NMOS output characteristics
+.model n1 PMOS(LEVEL=1 VTO=-1V KP=6.73E-6 GAMMA=1.179
+	+LAMBDA=0.005 PHI=0.66 uO=600 NSUB=5E15
+	+Tox=1000E-8)
+.model n2 NMOS(LEVEL=1 VTO=1V KP=20.179E-6 GAMMA=1.179
+	+LAMBDA=0.005 PHI=0.66 uO=600 NSUB=5E15
+	+Tox=1000E-8)
+
+M_N1 1 2 3 3 n1 w=8u l=2u
+M_N2 1 2 0 0 n2 w=2u l=2u
+vdd 3 0 4v
+vgs 2 0 5v
+.dc vgs 0 5 0.05
+.plot dc v(1)
+.probe
+.end
+

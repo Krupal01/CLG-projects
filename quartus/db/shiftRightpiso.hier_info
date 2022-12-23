@@ -1,0 +1,10 @@
+|shiftRightpiso
+data => a.DATAIN
+clk => y~reg0.CLK
+clk => c.CLK
+clk => b.CLK
+clk => a.CLK
+rst => ~NO_FANOUT~
+y <= y~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

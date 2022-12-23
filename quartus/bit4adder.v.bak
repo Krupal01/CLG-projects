@@ -1,0 +1,15 @@
+module bit4adder(input [3:0]a,b, input cin, output [3:0]sum, output cout);
+
+wire c0,c1,c2;
+fulladder f1(sum[0],cout,a[0],b[0],cin);
+fulladder f1(sum[0],cout,a[0],b[0],cin);
+fulladder f1(sum[0],cout,a[0],b[0],cin);
+fulladder f1(sum[0],cout,a[0],b[0],cin);
+
+endmodule
+
+module fulladder(output s,cout, input a,b,cin );
+
+assign s=a^b^cin;
+assign cout=(a&b)|(a&cin)|(b&cin);
+endmodule

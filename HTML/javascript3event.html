@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event handling</title>
+</head>
+<body>
+
+<p>Press a key on the keyboard in the input field to get the Unicode character code of the pressed key.</p>
+
+<input type="text" size="40" onkeypress="myFunction(event)">
+
+<p id="demo"></p>
+<p id="demo1"></p>
+<script>
+function myFunction(event) {
+
+  var x = event.which || event.keyCode;
+  document.getElementById("demo").innerHTML = "The Unicode value is: " + x; // to print key code
+
+  //for check vowel or not
+  if(x==97||x==101||x==105||x==111||x==117||x==65||x==69||x==73||x==79||x==85){
+    document.getElementById("demo1").innerHTML = "The Unicode value is vowel";
+  }
+  else{
+    document.getElementById("demo1").innerHTML = "The Unicode value is consonant";
+  }
+// change colour
+  document.body.style.background = 'red';
+}
+
+</script>
+
+
+</body>
+</html>

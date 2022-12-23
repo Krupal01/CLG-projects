@@ -1,0 +1,85 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             RESET, DATA, READONLY
+    2 00000000                 EXPORT           __Vectors
+    3 00000000         
+    4 00000000         __Vectors
+    5 00000000 20001000        DCD              0x20001000
+    6 00000004 00000000        DCD              Reset_Handler ; reset vector
+    7 00000008                 ALIGN
+    8 00000008         ; The program
+    9 00000008         ; Linker requires Reset_Handler
+   10 00000008                 AREA             MYCODE, CODE, READONLY
+   11 00000000                 ENTRY
+   12 00000000                 EXPORT           Reset_Handler
+   13 00000000         Reset_Handler
+   14 00000000         
+   15 00000000 E59FD00C        LDR              SP,=0x00000018
+   16 00000004 E59F100C        LDR              R1,=0x01234567
+   17 00000008 E59F200C        LDR              R2,=0X76543210
+   18 0000000C E58D0000        STR              R0,[R13]
+   19 00000010         
+   20 00000010 E8BD0018        LDMIA            SP!,{R3,R4}
+   21 00000014         
+   22 00000014         
+   23 00000014         
+   24 00000014                 END
+              00000018 
+              01234567 
+              76543210 
+Command Line: --debug --xref --diag_suppress=9931 --apcs=interwork --depend=.\o
+bjects\ex_3.d -o.\objects\ex_3.o -IC:\Keil_v5\ARM\RV31\INC -IC:\Keil_v5\ARM\CMS
+IS\Include -IC:\Keil_v5\ARM\Inc\Philips --predefine="__EVAL SETA 1" --predefine
+="__UVISION_VERSION SETA 522" --list=.\listings\ex_3.lst EX_3.S
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+RESET 00000000
+
+Symbol: RESET
+   Definitions
+      At line 1 in file EX_3.S
+   Uses
+      None
+Comment: RESET unused
+__Vectors 00000000
+
+Symbol: __Vectors
+   Definitions
+      At line 4 in file EX_3.S
+   Uses
+      At line 2 in file EX_3.S
+Comment: __Vectors used once
+2 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+MYCODE 00000000
+
+Symbol: MYCODE
+   Definitions
+      At line 10 in file EX_3.S
+   Uses
+      None
+Comment: MYCODE unused
+Reset_Handler 00000000
+
+Symbol: Reset_Handler
+   Definitions
+      At line 13 in file EX_3.S
+   Uses
+      At line 6 in file EX_3.S
+      At line 12 in file EX_3.S
+
+2 symbols
+338 symbols in table

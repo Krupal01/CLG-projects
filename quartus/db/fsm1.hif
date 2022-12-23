@@ -1,0 +1,87 @@
+Version 8.1 Build 163 10/28/2008 SJ Web Edition
+7
+2996
+OFF
+OFF
+OFF
+OFF
+ON
+ON
+ON
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Partition --
+-- End Partition --
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+fsm1
+# storage
+db|fsm1.(0).cnf
+db|fsm1.(0).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+fsm1.v
+1a2c5d54219dd015731f57e8e895777c
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# user_parameter {
+s0
+000
+PARAMETER_UNSIGNED_BIN
+DEF
+s2
+010
+PARAMETER_UNSIGNED_BIN
+DEF
+s3
+011
+PARAMETER_UNSIGNED_BIN
+DEF
+s5
+101
+PARAMETER_UNSIGNED_BIN
+DEF
+s6
+110
+PARAMETER_UNSIGNED_BIN
+DEF
+s7
+111
+PARAMETER_UNSIGNED_BIN
+DEF
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# complete
+

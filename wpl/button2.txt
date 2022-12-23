@@ -1,0 +1,2 @@
+IF {Link2}1@X1 == ON
+BITOFF ({Link2}1@Y0)

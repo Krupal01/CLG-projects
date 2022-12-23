@@ -1,0 +1,15 @@
+body{
+    background-color: rgb(102, 97, 97);
+}
+
+.navbar{
+    background-color: brown;
+    color: rgb(236, 198, 44);
+    margin: 10px;
+    padding: 5px;
+}
+.navButton{
+    background-color: darkgoldenrod;
+    border-radius: 5px;
+    color: black;
+}

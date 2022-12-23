@@ -1,0 +1,7 @@
+|jk_latch1
+j => q~0.IN1
+k => q~1.IN1
+clk => q$latch.LATCH_ENABLE
+q <= q$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+

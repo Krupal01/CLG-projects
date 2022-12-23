@@ -1,0 +1,232 @@
+Classic Timing Analyzer report for fsm
+Tue Oct 06 16:00:45 2020
+Quartus II Version 8.1 Build 163 10/28/2008 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Timing Analyzer Settings
+  4. Clock Settings Summary
+  5. Clock Setup: 'clk'
+  6. tsu
+  7. tco
+  8. th
+  9. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2008 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                                                                                ;
++------------------------------+-------+---------------+------------------------------------------------+--------------------+--------------------+------------+----------+--------------+
+; Type                         ; Slack ; Required Time ; Actual Time                                    ; From               ; To                 ; From Clock ; To Clock ; Failed Paths ;
++------------------------------+-------+---------------+------------------------------------------------+--------------------+--------------------+------------+----------+--------------+
+; Worst-case tsu               ; N/A   ; None          ; 3.238 ns                                       ; rst                ; s[1]~reg0          ; --         ; clk      ; 0            ;
+; Worst-case tco               ; N/A   ; None          ; 5.482 ns                                       ; s[1]~reg0          ; s[1]               ; clk        ; --       ; 0            ;
+; Worst-case th                ; N/A   ; None          ; -2.873 ns                                      ; rst                ; s[0]~reg0DUPLICATE ; --         ; clk      ; 0            ;
+; Clock Setup: 'clk'           ; N/A   ; None          ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; s[2]~reg0DUPLICATE ; s[1]~reg0          ; clk        ; clk      ; 0            ;
+; Total number of failed paths ;       ;               ;                                                ;                    ;                    ;            ;          ; 0            ;
++------------------------------+-------+---------------+------------------------------------------------+--------------------+--------------------+------------+----------+--------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Settings                                                                                           ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+; Option                                                              ; Setting            ; From ; To ; Entity Name ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+; Device Name                                                         ; EP2S15F484C3       ;      ;    ;             ;
+; Timing Models                                                       ; Final              ;      ;    ;             ;
+; Default hold multicycle                                             ; Same as Multicycle ;      ;    ;             ;
+; Cut paths between unrelated clock domains                           ; On                 ;      ;    ;             ;
+; Cut off read during write signal paths                              ; On                 ;      ;    ;             ;
+; Cut off feedback from I/O pins                                      ; On                 ;      ;    ;             ;
+; Report Combined Fast/Slow Timing                                    ; Off                ;      ;    ;             ;
+; Ignore Clock Settings                                               ; Off                ;      ;    ;             ;
+; Analyze latches as synchronous elements                             ; On                 ;      ;    ;             ;
+; Enable Recovery/Removal analysis                                    ; Off                ;      ;    ;             ;
+; Enable Clock Latency                                                ; Off                ;      ;    ;             ;
+; Use TimeQuest Timing Analyzer                                       ; Off                ;      ;    ;             ;
+; Number of source nodes to report per destination node               ; 10                 ;      ;    ;             ;
+; Number of destination nodes to report                               ; 10                 ;      ;    ;             ;
+; Number of paths to report                                           ; 200                ;      ;    ;             ;
+; Report Minimum Timing Checks                                        ; Off                ;      ;    ;             ;
+; Use Fast Timing Models                                              ; Off                ;      ;    ;             ;
+; Report IO Paths Separately                                          ; Off                ;      ;    ;             ;
+; Perform Multicorner Analysis                                        ; On                 ;      ;    ;             ;
+; Reports the worst-case path for each clock domain and analysis      ; Off                ;      ;    ;             ;
+; Removes common clock path pessimism (CCPP) during slack computation ; Off                ;      ;    ;             ;
+; Output I/O Timing Endpoint                                          ; Near End           ;      ;    ;             ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Settings Summary                                                                                                                                                             ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; Clock Node Name ; Clock Setting Name ; Type     ; Fmax Requirement ; Early Latency ; Late Latency ; Based on ; Multiply Base Fmax by ; Divide Base Fmax by ; Offset ; Phase offset ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; clk             ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Setup: 'clk'                                                                                                                                                                                           ;
++-------+------------------------------------------------+--------------------+--------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; Slack ; Actual fmax (period)                           ; From               ; To                 ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
++-------+------------------------------------------------+--------------------+--------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; s[2]~reg0DUPLICATE ; s[1]~reg0          ; clk        ; clk      ; None                        ; None                      ; 0.679 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; s[0]~reg0          ; s[2]~reg0          ; clk        ; clk      ; None                        ; None                      ; 0.674 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; s[0]~reg0          ; s[2]~reg0DUPLICATE ; clk        ; clk      ; None                        ; None                      ; 0.674 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; s[2]~reg0          ; s[0]~reg0          ; clk        ; clk      ; None                        ; None                      ; 0.666 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; s[2]~reg0          ; s[0]~reg0DUPLICATE ; clk        ; clk      ; None                        ; None                      ; 0.666 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; s[1]~reg0          ; s[2]~reg0          ; clk        ; clk      ; None                        ; None                      ; 0.447 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; s[1]~reg0          ; s[2]~reg0DUPLICATE ; clk        ; clk      ; None                        ; None                      ; 0.446 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; s[1]~reg0          ; s[0]~reg0          ; clk        ; clk      ; None                        ; None                      ; 0.441 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; s[1]~reg0          ; s[0]~reg0DUPLICATE ; clk        ; clk      ; None                        ; None                      ; 0.440 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; s[0]~reg0          ; s[1]~reg0          ; clk        ; clk      ; None                        ; None                      ; 0.416 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; s[0]~reg0          ; s[0]~reg0          ; clk        ; clk      ; None                        ; None                      ; 0.396 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; s[2]~reg0          ; s[2]~reg0          ; clk        ; clk      ; None                        ; None                      ; 0.396 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; s[1]~reg0          ; s[1]~reg0          ; clk        ; clk      ; None                        ; None                      ; 0.396 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; s[2]~reg0DUPLICATE ; s[2]~reg0DUPLICATE ; clk        ; clk      ; None                        ; None                      ; 0.396 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; s[0]~reg0DUPLICATE ; s[0]~reg0DUPLICATE ; clk        ; clk      ; None                        ; None                      ; 0.396 ns                ;
++-------+------------------------------------------------+--------------------+--------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+
+
++--------------------------------------------------------------------------+
+; tsu                                                                      ;
++-------+--------------+------------+------+--------------------+----------+
+; Slack ; Required tsu ; Actual tsu ; From ; To                 ; To Clock ;
++-------+--------------+------------+------+--------------------+----------+
+; N/A   ; None         ; 3.238 ns   ; rst  ; s[1]~reg0          ; clk      ;
+; N/A   ; None         ; 3.114 ns   ; rst  ; s[2]~reg0          ; clk      ;
+; N/A   ; None         ; 3.114 ns   ; rst  ; s[2]~reg0DUPLICATE ; clk      ;
+; N/A   ; None         ; 3.112 ns   ; rst  ; s[0]~reg0          ; clk      ;
+; N/A   ; None         ; 3.112 ns   ; rst  ; s[0]~reg0DUPLICATE ; clk      ;
++-------+--------------+------------+------+--------------------+----------+
+
+
++----------------------------------------------------------------------------+
+; tco                                                                        ;
++-------+--------------+------------+--------------------+------+------------+
+; Slack ; Required tco ; Actual tco ; From               ; To   ; From Clock ;
++-------+--------------+------------+--------------------+------+------------+
+; N/A   ; None         ; 5.482 ns   ; s[1]~reg0          ; s[1] ; clk        ;
+; N/A   ; None         ; 5.360 ns   ; s[2]~reg0DUPLICATE ; s[2] ; clk        ;
+; N/A   ; None         ; 5.351 ns   ; s[0]~reg0DUPLICATE ; s[0] ; clk        ;
++-------+--------------+------------+--------------------+------+------------+
+
+
++--------------------------------------------------------------------------------+
+; th                                                                             ;
++---------------+-------------+-----------+------+--------------------+----------+
+; Minimum Slack ; Required th ; Actual th ; From ; To                 ; To Clock ;
++---------------+-------------+-----------+------+--------------------+----------+
+; N/A           ; None        ; -2.873 ns ; rst  ; s[0]~reg0          ; clk      ;
+; N/A           ; None        ; -2.873 ns ; rst  ; s[0]~reg0DUPLICATE ; clk      ;
+; N/A           ; None        ; -2.875 ns ; rst  ; s[2]~reg0          ; clk      ;
+; N/A           ; None        ; -2.875 ns ; rst  ; s[2]~reg0DUPLICATE ; clk      ;
+; N/A           ; None        ; -2.999 ns ; rst  ; s[1]~reg0          ; clk      ;
++---------------+-------------+-----------+------+--------------------+----------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Classic Timing Analyzer
+    Info: Version 8.1 Build 163 10/28/2008 SJ Web Edition
+    Info: Processing started: Tue Oct 06 16:00:45 2020
+Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off fsm -c fsm --timing_analysis_only
+Warning: Found pins functioning as undefined clocks and/or memory enables
+    Info: Assuming node "clk" is an undefined clock
+Info: Clock "clk" Internal fmax is restricted to 500.0 MHz between source register "s[2]~reg0DUPLICATE" and destination register "s[1]~reg0"
+    Info: fmax restricted to clock pin edge rate 2.0 ns. Expand message to see actual delay path.
+        Info: + Longest register to register delay is 0.679 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X21_Y3_N27; Fanout = 3; REG Node = 's[2]~reg0DUPLICATE'
+            Info: 2: + IC(0.252 ns) + CELL(0.272 ns) = 0.524 ns; Loc. = LCCOMB_X21_Y3_N4; Fanout = 1; COMB Node = 's[1]~582'
+            Info: 3: + IC(0.000 ns) + CELL(0.155 ns) = 0.679 ns; Loc. = LCFF_X21_Y3_N5; Fanout = 6; REG Node = 's[1]~reg0'
+            Info: Total cell delay = 0.427 ns ( 62.89 % )
+            Info: Total interconnect delay = 0.252 ns ( 37.11 % )
+        Info: - Smallest clock skew is 0.000 ns
+            Info: + Shortest clock path from clock "clk" to destination register is 2.483 ns
+                Info: 1: + IC(0.000 ns) + CELL(0.854 ns) = 0.854 ns; Loc. = PIN_N20; Fanout = 1; CLK Node = 'clk'
+                Info: 2: + IC(0.343 ns) + CELL(0.000 ns) = 1.197 ns; Loc. = CLKCTRL_G3; Fanout = 5; COMB Node = 'clk~clkctrl'
+                Info: 3: + IC(0.668 ns) + CELL(0.618 ns) = 2.483 ns; Loc. = LCFF_X21_Y3_N5; Fanout = 6; REG Node = 's[1]~reg0'
+                Info: Total cell delay = 1.472 ns ( 59.28 % )
+                Info: Total interconnect delay = 1.011 ns ( 40.72 % )
+            Info: - Longest clock path from clock "clk" to source register is 2.483 ns
+                Info: 1: + IC(0.000 ns) + CELL(0.854 ns) = 0.854 ns; Loc. = PIN_N20; Fanout = 1; CLK Node = 'clk'
+                Info: 2: + IC(0.343 ns) + CELL(0.000 ns) = 1.197 ns; Loc. = CLKCTRL_G3; Fanout = 5; COMB Node = 'clk~clkctrl'
+                Info: 3: + IC(0.668 ns) + CELL(0.618 ns) = 2.483 ns; Loc. = LCFF_X21_Y3_N27; Fanout = 3; REG Node = 's[2]~reg0DUPLICATE'
+                Info: Total cell delay = 1.472 ns ( 59.28 % )
+                Info: Total interconnect delay = 1.011 ns ( 40.72 % )
+        Info: + Micro clock to output delay of source is 0.094 ns
+        Info: + Micro setup delay of destination is 0.090 ns
+Info: tsu for register "s[1]~reg0" (data pin = "rst", clock pin = "clk") is 3.238 ns
+    Info: + Longest pin to register delay is 5.631 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.810 ns) = 0.810 ns; Loc. = PIN_T6; Fanout = 5; PIN Node = 'rst'
+        Info: 2: + IC(4.288 ns) + CELL(0.378 ns) = 5.476 ns; Loc. = LCCOMB_X21_Y3_N4; Fanout = 1; COMB Node = 's[1]~582'
+        Info: 3: + IC(0.000 ns) + CELL(0.155 ns) = 5.631 ns; Loc. = LCFF_X21_Y3_N5; Fanout = 6; REG Node = 's[1]~reg0'
+        Info: Total cell delay = 1.343 ns ( 23.85 % )
+        Info: Total interconnect delay = 4.288 ns ( 76.15 % )
+    Info: + Micro setup delay of destination is 0.090 ns
+    Info: - Shortest clock path from clock "clk" to destination register is 2.483 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.854 ns) = 0.854 ns; Loc. = PIN_N20; Fanout = 1; CLK Node = 'clk'
+        Info: 2: + IC(0.343 ns) + CELL(0.000 ns) = 1.197 ns; Loc. = CLKCTRL_G3; Fanout = 5; COMB Node = 'clk~clkctrl'
+        Info: 3: + IC(0.668 ns) + CELL(0.618 ns) = 2.483 ns; Loc. = LCFF_X21_Y3_N5; Fanout = 6; REG Node = 's[1]~reg0'
+        Info: Total cell delay = 1.472 ns ( 59.28 % )
+        Info: Total interconnect delay = 1.011 ns ( 40.72 % )
+Info: tco from clock "clk" to destination pin "s[1]" through register "s[1]~reg0" is 5.482 ns
+    Info: + Longest clock path from clock "clk" to source register is 2.483 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.854 ns) = 0.854 ns; Loc. = PIN_N20; Fanout = 1; CLK Node = 'clk'
+        Info: 2: + IC(0.343 ns) + CELL(0.000 ns) = 1.197 ns; Loc. = CLKCTRL_G3; Fanout = 5; COMB Node = 'clk~clkctrl'
+        Info: 3: + IC(0.668 ns) + CELL(0.618 ns) = 2.483 ns; Loc. = LCFF_X21_Y3_N5; Fanout = 6; REG Node = 's[1]~reg0'
+        Info: Total cell delay = 1.472 ns ( 59.28 % )
+        Info: Total interconnect delay = 1.011 ns ( 40.72 % )
+    Info: + Micro clock to output delay of source is 0.094 ns
+    Info: + Longest register to pin delay is 2.905 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X21_Y3_N5; Fanout = 6; REG Node = 's[1]~reg0'
+        Info: 2: + IC(0.963 ns) + CELL(1.942 ns) = 2.905 ns; Loc. = PIN_U10; Fanout = 0; PIN Node = 's[1]'
+        Info: Total cell delay = 1.942 ns ( 66.85 % )
+        Info: Total interconnect delay = 0.963 ns ( 33.15 % )
+Info: th for register "s[0]~reg0" (data pin = "rst", clock pin = "clk") is -2.873 ns
+    Info: + Longest clock path from clock "clk" to destination register is 2.483 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.854 ns) = 0.854 ns; Loc. = PIN_N20; Fanout = 1; CLK Node = 'clk'
+        Info: 2: + IC(0.343 ns) + CELL(0.000 ns) = 1.197 ns; Loc. = CLKCTRL_G3; Fanout = 5; COMB Node = 'clk~clkctrl'
+        Info: 3: + IC(0.668 ns) + CELL(0.618 ns) = 2.483 ns; Loc. = LCFF_X21_Y3_N1; Fanout = 4; REG Node = 's[0]~reg0'
+        Info: Total cell delay = 1.472 ns ( 59.28 % )
+        Info: Total interconnect delay = 1.011 ns ( 40.72 % )
+    Info: + Micro hold delay of destination is 0.149 ns
+    Info: - Shortest pin to register delay is 5.505 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.810 ns) = 0.810 ns; Loc. = PIN_T6; Fanout = 5; PIN Node = 'rst'
+        Info: 2: + IC(4.268 ns) + CELL(0.272 ns) = 5.350 ns; Loc. = LCCOMB_X21_Y3_N0; Fanout = 1; COMB Node = 's[0]~581'
+        Info: 3: + IC(0.000 ns) + CELL(0.155 ns) = 5.505 ns; Loc. = LCFF_X21_Y3_N1; Fanout = 4; REG Node = 's[0]~reg0'
+        Info: Total cell delay = 1.237 ns ( 22.47 % )
+        Info: Total interconnect delay = 4.268 ns ( 77.53 % )
+Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 222 megabytes
+    Info: Processing ended: Tue Oct 06 16:00:46 2020
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:00
+
+

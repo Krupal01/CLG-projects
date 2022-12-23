@@ -1,0 +1,4 @@
+Dependencies for Project 'LCD17', Target 'Target 1': (DO NOT MODIFY !)
+F (.\Startup.s)(0x559CEFD8)(--cpu ARM7TDMI --pd "__EVAL SETA 1" -g --apcs=interwork -IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\Inc\Philips--pd "__UVISION_VERSION SETA 522"--list .\listings\startup.lst --xref -o .\objects\startup.o --depend .\objects\startup.d)
+F (.\LED17.C)(0x5F8C1791)(-c --cpu ARM7TDMI -D__EVAL -g -O0 --apcs=interwork --split_sections-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\Inc\Philips-D__UVISION_VERSION="522"-o .\objects\led17.o --omf_browse .\objects\led17.crf --depend .\objects\led17.d)
+I (C:\Keil_v5\ARM\Inc\Philips\lpc21xx.h)(0x559CF020)

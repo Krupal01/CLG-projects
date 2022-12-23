@@ -1,0 +1,13 @@
+|jk_ff
+j => always0~2.IN0
+j => always0~1.IN0
+j => always0~0.IN0
+k => always0~2.IN1
+k => always0~0.IN1
+k => always0~1.IN1
+clk => q~reg0.CLK
+clk => qbar~reg0.CLK
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+qbar <= qbar~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

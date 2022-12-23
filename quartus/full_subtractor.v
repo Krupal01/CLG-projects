@@ -1,0 +1,6 @@
+module full_subtractor(input a,b,cin, output sub,borrow );
+
+assign sub=a^b^cin;
+assign borrow=(~a&b)|(~a&cin)|(b&cin);
+
+endmodule 

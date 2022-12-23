@@ -1,0 +1,14 @@
+*NMOS noise margin
+.model n1 NMOS(LEVEL=1 VTO=1V KP=20.179E-6 GAMMA=1.179
+					+LAMBDA=0.005 PHI=0.66 uO=600 NSUB=5E15
+					+Tox=1000E-8)
+M_N 1 2 0 0 n1 w=8u l=2u
+vgs 2 0 5v
+*vsb 0 4 4v
+vdd 3 0 5v
+r1 3 1 100kohm
+.dc vgs 0 5 0.05
+.print dc v(1)
+*.plot dc v(1)
+.probe
+.end

@@ -1,0 +1,9 @@
+|shiftreg
+din => a.DATAIN
+clk => c.CLK
+clk => b.CLK
+clk => a.CLK
+clk => dout~reg0.CLK
+dout <= dout~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

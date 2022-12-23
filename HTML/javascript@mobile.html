@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mobile number Validation</title>
+    <script>
+        function valid(){
+            var mobile=document.getElementById("mobile").value;
+            var valid=/^\d{10}$/;
+            if(mobile.match(valid)){
+                alert("your mobile nuber is validate");
+            }
+            else{
+                alert("enter valid mobile number");
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <input type="text" id="mobile">
+    <button onclick="valid()">submit</button>
+</body>
+</html>
